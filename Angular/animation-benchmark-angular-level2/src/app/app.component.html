@@ -1,0 +1,61 @@
+<div class="page">
+  <div class="modal-overlay" *ngIf="modal" (click)="closeModal()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ modal.title }}</h2>
+        <button class="modal-close" (click)="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-item" *ngFor="let item of modal.content">
+          <span class="modal-dot">▸</span>
+          <p>{{ item }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      AnimBench
+    </div>
+    <div class="level-badge" [ngStyle]="levelBadgeStyle">{{ levelBadgeText }}</div>
+  </nav>
+  <section class="hero">
+    <div class="hero-left">
+      <p class="badge">🔬 Research Project — SUSL</p>
+      <h1>Animation <span class="highlight">Performance</span> Benchmark</h1>
+      <p class="level-tag" [ngStyle]="levelTagStyle">{{ levelTagText }}</p>
+      <p class="hero-sub">
+        A controlled experimental study comparing animation rendering
+        performance across React, Vue.js, Svelte and Angular frameworks.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" (click)="openResearchModal()">View Research</button>
+        <button class="btn-secondary" (click)="openLearnMoreModal()">Learn More</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number">4</span><span class="stat-label">Frameworks</span></div>
+        <div class="stat"><span class="stat-number">7</span><span class="stat-label">Metrics</span></div>
+        <div class="stat"><span class="stat-number">30+</span><span class="stat-label">Test Runs</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="logo-wrapper">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="animated-logo"></div>
+      </div>
+      <p class="logo-label">⚡ Animated Test Element</p>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="brand-dot"></span>AnimBench</div>
+      <p>IS 8101 Research Project in Information Systems</p>
+      <p>Department of Computing & Information Systems</p>
+      <p>Sabaragamuwa University of Sri Lanka</p>
+      <p class="footer-copy">© 2025 S. Niluxshan — 20APC4681</p>
+    </div>
+  </footer>
+</div>
