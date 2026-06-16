@@ -26,7 +26,7 @@
     <section class="hero">
       <div class="hero-left">
         <p class="badge">🔬 Research Project — SUSL</p>
-        <h1>Animation <span class="highlight">Performance</span> Benchmark</h1>
+        <h1>Animation <span class="highlight">Performance</span> Benchmark- Vue.js</h1>
         <p class="level-tag">⚙ Level 2: Staggered animations · Cubic-bezier easing · Enhanced hover effects</p>
         <p class="hero-sub">
           A controlled experimental study comparing animation rendering
